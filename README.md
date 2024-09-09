@@ -44,10 +44,12 @@ The **Liv2Train Training Center API** is a Spring Boot application designed to m
 ```
 
 ## 2. Get All Training Centers
-**Endpoint: /api/training-centers
-Method: GET
-Response:
-Status Code: 200 OK**
+**Endpoint:** ` /api/training-centers`
+
+**Method:** ` GET`
+
+**Response:** 
+`Status Code: 200 OK `
 ```json
 [
   {
