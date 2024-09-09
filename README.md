@@ -2,12 +2,19 @@
 # Liv2Train Training Center API
 
 This project is a Spring Boot application that provides APIs to manage training centers.
-1. Create a Training Center
-URL: /api/training-centers
 
-Method: POST
 
-Request Body:
+## Overview
+The **Liv2Train Training Center API** is a Spring Boot application designed to manage training centers. The API provides endpoints for creating and retrieving training centers along with their details such as location, capacity, and the courses they offer.
+
+## API Endpoints
+
+### 1. Create a Training Center
+**Endpoint:** `/api/training-centers`  
+**Method:** `POST`  
+**Request Body:**
+
+```json
 {
   "centerName": "Masai Training Center",
   "address": {
@@ -19,10 +26,12 @@ Request Body:
   "courses": ["Java", "Spring Boot"]
 }
 
-Response: 201 Created
-
+```
+****Response:**
+**Status Code: 201 Created****
+```json
 {
-"id":1,
+  "id": 1,
   "centerName": "Masai Training Center",
   "address": {
     "city": "Pune",
@@ -32,14 +41,14 @@ Response: 201 Created
   "capacity": 100,
   "courses": ["Java", "Spring Boot"]
 }
+```
 
-
-2. Get All Training Centers
-URL: /api/training-centers
+## 2. Get All Training Centers
+**Endpoint: /api/training-centers
 Method: GET
-Response: 200 OK
-
-
+Response:
+Status Code: 200 OK**
+```json
 [
   {
     "id": 1,
@@ -64,3 +73,4 @@ Response: 200 OK
     "courses": ["Python", "Data Science"]
   }
 ]
+```
