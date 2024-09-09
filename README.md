@@ -10,7 +10,7 @@ The **Liv2Train Training Center API** is a Spring Boot application designed to m
 ## API Endpoints
 
 ### 1. Create a Training Center
-**Endpoint:** `/api/training-centers`  
+**Endpoint:** `/api/training-centers/createTrainingCenter`  
 **Method:** `POST`  
 **Request Body:**
 
@@ -44,7 +44,7 @@ The **Liv2Train Training Center API** is a Spring Boot application designed to m
 ```
 
 ## 2. Get All Training Centers
-**Endpoint:** ` /api/training-centers`
+**Endpoint:** ` /api/training-centers/getAllTrainingCenters`
 
 **Method:** ` GET`
 
