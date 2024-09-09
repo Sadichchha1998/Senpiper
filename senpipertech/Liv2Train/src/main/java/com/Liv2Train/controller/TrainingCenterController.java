@@ -17,13 +17,13 @@ import com.Liv2Train.model.TrainingCenter;
 import com.Liv2Train.service.TrainingCenterService;
 
 @RestController
-@RequestMapping("/api/training-centers")
+@RequestMapping("/api/training-centers/")
 public class TrainingCenterController {
 
     @Autowired
     private TrainingCenterService service;
 
-    @PostMapping
+    @PostMapping("/createTrainingCenter")
     public ResponseEntity<TrainingCenter> createTrainingCenter(
             @Validated @RequestBody TrainingCenter trainingCenter) {
     	 TrainingCenter savedCenter = service.saveTrainingCenter(trainingCenter);
@@ -31,7 +31,7 @@ public class TrainingCenterController {
       
     }
 
-    @GetMapping
+    @GetMapping("/getAllTrainingCenters")
     public ResponseEntity<List<TrainingCenter>> getAllTrainingCenters() {
         List<TrainingCenter> centers = service.getAllTrainingCenters();
         return new ResponseEntity<>(centers,HttpStatus.OK);
